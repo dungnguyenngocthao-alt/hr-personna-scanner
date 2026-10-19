@@ -96,7 +96,7 @@
           <button class="btn btn--lg btn--round intro__cta" id="start">${esc(H.cta)} ${icon('arrow-right')}</button>
         </div>
       </div>
-      <div class="hero__art"><img src="assets/hero-cutout.webp" alt="${esc(H.heroAlt)}" width="1400" height="788"></div>
+      <div class="hero__art"><img src="assets/hero-scene.webp" alt="${esc(H.heroAlt)}" width="1672" height="941"></div>
     </div></div></section>
     <section class="cards-band" aria-label="${esc(H.stripLabel)}"><div class="container"><div class="cards home-block">
       <div class="cards__head">

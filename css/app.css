@@ -304,12 +304,13 @@ body { background: var(--page-bg); }
 .hero__grid.home-block { background: transparent; padding: 0; border-radius: 0; overflow: visible; gap: var(--space-24); align-items: stretch; }
 .hero__copy .hero__title { font-size: var(--h2-size); line-height: var(--h2-lh); letter-spacing: var(--h2-ls); }   /* mọi khổ màn hình: tối đa bằng bản 1440 (H2 30px; mobile token H2 = 24px) */
 .hero__copy { max-width: none; background: var(--white); border-radius: var(--radius-lg); padding: var(--space-48); align-content: center; }
-.hero__art { display: flex; align-items: center; justify-self: stretch; margin: 0; overflow: hidden; border-radius: var(--radius-lg); background: var(--white); }   /* ảnh hero-cutout.webp đã tách nền (trong suốt) nên không lộ khung/đường kẻ */
+.hero__art { display: flex; align-items: center; justify-self: stretch; margin: 0; overflow: hidden; border-radius: var(--radius-lg); background: var(--indigo-100); }   /* ảnh hero-scene.webp có nền riêng, phủ kín khối */
 .hero__art img { width: 100%; height: auto; object-fit: contain; -webkit-mask-image: none; mask-image: none; }
 /* Hai khối cạnh nhau từ 1200px: chữ gọn lại (tiêu đề H2, body P-sm, chú thích P-mini) để khối chữ cao xấp xỉ ảnh */
 @media (min-width: 1200px) {
   .hero { --hero-rhythm: var(--space-16); }
   .hero__grid.home-block { grid-template-columns: minmax(0, 4fr) minmax(0, 7fr); }
+  .hero__art img { height: 100%; object-fit: cover; object-position: 50% 55%; }   /* ảnh cảnh phủ kín khối, cao bằng khối chữ */
   .hero__copy { padding: var(--space-32) var(--space-40); }
   .hero__lead { font-size: var(--p-sm-size); line-height: var(--p-sm-lh); letter-spacing: var(--p-sm-ls); }
   .hero__method { font-size: var(--p-mini-size); line-height: var(--p-mini-lh); letter-spacing: var(--p-mini-ls); }
