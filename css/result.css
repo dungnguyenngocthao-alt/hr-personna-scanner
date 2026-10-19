@@ -12,6 +12,7 @@
   background: var(--page-bg);
   min-height: 100dvh;
 }
+.res > .container { max-width: calc(1280px + 2 * 32px); margin-inline: auto; }   /* trang kết quả: nội dung rộng tối đa 1280px, căn giữa trang */
 .res__top { display: flex; align-items: center; justify-content: space-between; gap: var(--space-12); padding-block: var(--space-24) var(--space-16); }
 .res__top .logo__mark { width: 36px; height: auto; }
 .res__body { display: grid; gap: var(--space-24); padding-bottom: var(--space-80); }
