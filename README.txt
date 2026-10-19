@@ -17,7 +17,7 @@ Cấu trúc
 
 Ghi chú
 - Font Inter tải từ Google Fonts; khi offline trang tự dùng font dự phòng của máy.
-- Hai nút công cụ "Preview UI kết quả" (góc phải dưới, duyệt 10 trường hợp kết quả) và
+- Hai nút công cụ "Xem nhanh kết quả" (góc phải dưới, duyệt 10 trường hợp kết quả) và
   "Điền dữ liệu mẫu" (form) kèm ghi chú "(chỉ dùng cho preview UI)".
   Tắt hẳn khi chạy thật: trong js/content.js đặt CONFIG.DEV_TOOLS = false.
 - Form chưa nối backend: dữ liệu chỉ nằm trong sessionStorage của trình duyệt.

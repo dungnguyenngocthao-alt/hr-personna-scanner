@@ -10,7 +10,7 @@ window.CONFIG = {
   MARKETING_CONSENT_TEXT: 'Tôi đồng ý nhận thông tin về các chương trình của Talent Connect Plus qua email.',
   BOOTH_IDLE_RESET_SECONDS: 90,
   TIME_PROMISE_SECONDS: 60,
-  /* Công cụ preview UI (nút "Preview UI kết quả", "Điền dữ liệu mẫu"): hiện ở mọi môi trường kèm ghi chú TEXT.devNote.
+  /* Công cụ preview UI (nút "Xem nhanh kết quả", "Điền dữ liệu mẫu"): hiện ở mọi môi trường kèm ghi chú TEXT.devNote.
      Tắt hẳn khi chạy thật với người dùng: DEV_TOOLS = false. */
   DEV_TOOLS: true,
 };
@@ -173,7 +173,7 @@ window.TEXT = {
       'Costa, P. T., & McCrae, R. R. (1992). Revised NEO Personality Inventory (Five-Factor Model).',
     ],
     /* Bộ chọn nhanh để duyệt 10 trường hợp kết quả — công cụ nội bộ (xem CONFIG.DEV_TOOLS). */
-    picker: { button: 'Preview UI kết quả', title: 'Chọn trường hợp kết quả', single: 'Chân dung rõ nét', double1: 'Kép · 1 chính 1 phụ', double2: 'Kép · 2 bằng điểm', multi3: 'Đa diện · 3 bằng điểm', multi6: 'Đa diện · 6 bằng điểm' },
+    picker: { button: 'Xem nhanh kết quả', title: 'Chọn trường hợp kết quả', single: 'Chân dung rõ nét', double1: 'Kép · 1 chính 1 phụ', double2: 'Kép · 2 bằng điểm', multi3: 'Đa diện · 3 bằng điểm', multi6: 'Đa diện · 6 bằng điểm' },
   },
   reset: {
     button: 'Lượt mới',
