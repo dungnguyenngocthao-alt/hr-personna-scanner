@@ -148,7 +148,6 @@ body { background: var(--page-bg); }
   width: 100%; max-width: 600px; margin-inline: auto;
   padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
 }
-.quiz__col { max-width: 800px; }   /* màn câu hỏi rộng hơn form (600px) */
 .quiz__progress { display: grid; gap: var(--space-12); width: 100%; padding-top: var(--space-8); }   /* "Quay lại" → nội dung: 16 (gap) + 8 = 24px */
 .quiz__col > .flow-link--down { margin-top: var(--space-8); }   /* nội dung → "Tiếp tục": 16 (gap) + 8 = 24px, cân với phía trên */
 .quiz__count { font-size: var(--p-mini-size); line-height: var(--p-mini-lh); letter-spacing: var(--p-mini-ls); text-transform: uppercase; color: var(--brand-ink); }
