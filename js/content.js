@@ -146,7 +146,7 @@ window.TEXT = {
     mentorTitle: 'Tìm mentor thế nào',
     stepTitle: 'Một bước nên đi tới',
     questionTitle: 'Câu hỏi mang về',
-    questionArt: { DH: 'assets/question-DH.webp?v=6', KT: 'assets/question-KT.webp?v=6', TP: 'assets/question-TP.webp?v=6', GN: 'assets/question-GN.webp?v=6', GM: 'assets/question-GM.webp?v=6', TL: 'assets/question-TL.webp?v=6' },   // minh họa cho khối "Câu hỏi mang về" (Figma 281:3439 … 281:3453)
+    questionArt: { DH: 'assets/question-DH.webp?v=6', KT: 'assets/question-KT.webp?v=7', TP: 'assets/question-TP.webp?v=6', GN: 'assets/question-GN.webp?v=6', GM: 'assets/question-GM.webp?v=6', TL: 'assets/question-TL.webp?v=6' },   // minh họa cho khối "Câu hỏi mang về" (Figma 281:3439 … 281:3453)
     teammateTitle: 'Đồng đội ăn ý',
     tcp: { eyebrow: 'Mảnh ghép chiến lược', title: 'Dành riêng cho bạn', cta: 'Tìm hiểu chương trình', url: 'https://talentconnectplus.edu.vn/' },
     brandCard: {
