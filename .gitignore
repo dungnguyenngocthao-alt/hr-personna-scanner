@@ -1,0 +1,4 @@
+# Ảnh backup không dùng trên trang (giữ ở máy local)
+assets/_hires/
+assets/_old/
+.DS_Store

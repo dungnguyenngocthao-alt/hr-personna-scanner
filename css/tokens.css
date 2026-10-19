@@ -1,0 +1,175 @@
+/* =========================================================================
+   TCP 2026 — Design tokens (CSS)
+   Nguồn: TCP-design-system-v1.0 / tokens/*.json (Figma "TCP 2026", Design 8.8)
+   Chỉ có light mode (semantic.dark = null) — không tự tạo dark mode.
+
+   Quy ước sửa:
+   - Đổi giá trị ở đây, mọi trang (survey + styleguide) tự cập nhật.
+   - Component chỉ dùng token semantic (--background, --primary…), không dùng hex.
+   - Mục "MỞ RỘNG" là phần thêm cho HR Persona Scanner, không có trong Figma.
+   ========================================================================= */
+
+:root {
+  color-scheme: light;
+
+  /* ---------- Raw palette (chỉ các bậc đang dùng; bảng đầy đủ ở styleguide) ---------- */
+  --white: #FFFFFF;
+  --black: #000000;
+
+  --gray-50:  #F9FAFB; --gray-100: #F3F4F6; --gray-200: #E5E7EB; --gray-300: #D1D5DB;
+  --gray-400: #9CA3AF; --gray-500: #6B7280; --gray-600: #4B5563; --gray-700: #374151;
+  --gray-800: #1F2937; --gray-900: #111827; --gray-950: #030712;
+
+  --indigo-50:  #EEF2FF; --indigo-100: #E0E7FF; --indigo-200: #C7D2FE; --indigo-300: #A5B4FC;
+  --indigo-400: #818CF8; --indigo-500: #6366F1; --indigo-600: #4F46E5; --indigo-700: #4338CA;
+  --indigo-800: #3730A3; --indigo-900: #312E81; --indigo-950: #1E1B4B;
+
+  --orange-50: #FFF7ED; --orange-100: #FFEDD5; --orange-400: #FB923C; --orange-500: #F97316;
+  --orange-600: #EA580C; --orange-700: #C2410C;
+
+  --red-50: #FEF2F2; --red-300: #FCA5A5; --red-500: #EF4444; --red-600: #DC2626; --red-700: #B91C1C;
+  --zinc-100: #F4F4F5;
+  --slate-50: #F8FAFC; --slate-100: #F1F5F9; --slate-200: #E2E8F0; --slate-950: #020617;
+
+  --brand-navy-deep: #00126A;
+  --brand-navy-darkest: #001A33;
+  --brand-blue: #0068FF;
+  /* Màu lấy mẫu từ logo chính thức (assets/logo.webp) */
+  --brand-wordmark: var(--indigo-900);   /* chữ logo — theo feedback dùng indigo/900 (#312E81); mẫu gốc logo là #202B74 */
+  --brand-dot: #F2542C;
+
+  /* ---------- Semantic · general ---------- */
+  --background: #FFFFFF;
+  --foreground: #1F2937;
+  --primary: #4F46E5;
+  --primary-foreground: #F9FAFB;
+  --secondary: #F3F4F6;
+  --secondary-foreground: #312E81;
+  --accent: #F3F4F6;
+  --accent-foreground: #6366F1;
+  --muted: #F3F4F6;
+  --muted-foreground: #6B7280;
+  --destructive: #DC2626;
+  --border: #E5E7EB;
+  --input: #FFFFFF;
+
+  /* card / popover */
+  --card: #FFFFFF;
+  --card-foreground: #020617;
+  --popover: #3730A3;
+  --popover-foreground: #FFFFFF;
+
+  /* focus (giá trị gốc Figma — xem cảnh báo a11y) */
+  --ring: #E0E7FF;
+  --ring-secondary: #F4F4F5;
+  --ring-error: #FCA5A5;
+
+  /* unofficial (trạng thái tương tác) */
+  --foreground-alt: #374151;
+  --ghost: rgba(255,255,255,0.0001);
+  --ghost-hover: rgba(0,0,0,0.05);
+  --ghost-foreground: #1F2937;
+  --outline: rgba(255,255,255,0.1);
+  --outline-hover: rgba(51,65,85,0.033);
+  --outline-active: rgba(51,65,85,0.05);
+  --primary-hover: #6366F1;
+  --secondary-bg: var(--indigo-50);          /* Button Secondary dùng indigo/50, KHÔNG phải --secondary */
+  --secondary-hover: #E0E7FF;
+  --backdrop: rgba(51,65,85,0.6);
+  --destructive-border: #EF4444;
+  --destructive-subtle: #FEF2F2;
+  --destructive-foreground: #DC2626;
+  --accent-0: #F9FAFB; --accent-2: #E5E7EB; --accent-3: #D1D5DB;
+  --border-0: #F9FAFB; --border-1: #F3F4F6; --border-3: #D1D5DB; --border-4: #9CA3AF; --border-5: #6B7280;
+
+  /* ---------- Typography ---------- */
+  --font-sans: "Inter", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  --font-mono: Menlo, Consolas, "Liberation Mono", monospace;
+
+  /* size / line-height / tracking theo typography.json */
+  --h1-size: 48px; --h1-lh: 56px; --h1-ls: -2px;
+  --h2-size: 30px; --h2-lh: 36px; --h2-ls: 0;
+  --h3-size: 24px; --h3-lh: 28px; --h3-ls: 0;
+  --h4-size: 20px; --h4-lh: 24px; --h4-ls: 0;
+  --p-size: 16px;  --p-lh: 24px;  --p-ls: 0;
+  --p-sm-size: 14px; --p-sm-lh: 22px; --p-sm-ls: 0.07px;
+  --p-mini-size: 12px; --p-mini-lh: 16px; --p-mini-ls: 0.18px;
+
+  /* ---------- Spacing (thang phi tuyến — chọn giá trị gần nhất, không tự đặt) ---------- */
+  --space-3: 3px; --space-4: 4px; --space-6: 6px; --space-7: 7px; --space-8: 8px;
+  --space-10: 10px; --space-12: 12px; --space-15: 15px; --space-16: 16px; --space-19: 19px;
+  --space-20: 20px; --space-21: 21px; --space-24: 24px; --space-25: 25px; --space-32: 32px;
+  --space-40: 40px; --space-48: 48px; --space-60: 60px; --space-80: 80px; --space-88: 88px;
+  --space-96: 96px; --space-120: 120px;
+
+  /* ---------- Radius ---------- */
+  --radius-xs: 4px;    /* checkbox, chip nhỏ */
+  --radius-sm: 8px;    /* button, input */
+  --radius-10: 10px;   /* rich radio/checkbox (giá trị lẻ có thật trong Figma) */
+  --radius-12: 12px;   /* progress, alert dialog (giá trị lẻ có thật trong Figma) */
+  --radius-md: 16px;   /* card */
+  --radius-lg: 24px;   /* panel lớn, modal */
+  --radius-xl: 28px;   /* hero panel */
+  --radius-2xl: 40px;
+  --radius-3xl: 60px;
+  --radius-pill: 999px;
+  --radius-full: 9999px;
+
+  /* ---------- Shadows / elevation ---------- */
+  --shadow-2xs: 0px 1px 0px rgba(55,65,81,0.05);
+  --shadow-xs:  0px 1px 2px rgba(55,65,81,0.05);
+  --shadow-sm:  0px 1px 3px rgba(55,65,81,0.1), 0px 1px 2px -1px rgba(55,65,81,0.1);
+  --shadow-md:  0px 4px 6px -1px rgba(0,0,0,0.1), 0px 2px 4px -2px rgba(0,0,0,0.1);
+  --shadow-lg:  0px 10px 15px -3px rgba(55,65,81,0.1), 0px 4px 6px rgba(55,65,81,0.1);
+  --shadow-xl:  0px 20px 25px -5px rgba(55,65,81,0.1), 0px 8px 10px rgba(55,65,81,0.1);
+  --shadow-2xl: 0px 25px 50px 12px rgba(55,65,81,0.25);
+
+  /* Focus ring: rộng 3px như Figma. Màu gốc --ring-secondary (#F4F4F5) chỉ đạt 1.10:1 trên nền trắng
+     → dùng indigo/500 theo đề xuất trong guidelines/accessibility.md (#1). Đổi lại ở đây nếu Design chốt màu khác. */
+  --focus-ring-width: 3px;
+  --focus-ring-color: var(--indigo-500);
+  --focus-ring-error-color: var(--red-500);
+  --focus-ring: 0 0 0 var(--focus-ring-width) var(--focus-ring-color);
+  --focus-ring-error: 0 0 0 var(--focus-ring-width) var(--focus-ring-error-color);
+
+  /* ---------- Breakpoints (suy luận, chưa có trong Figma) — dùng trong @media bằng số ---------- */
+  /* sm 640 · md 768 · lg 1024 · xl 1280 · 2xl 1440 */
+  --container-max: 1440px;   /* nới từ 1248 để minh họa hero to hơn; lề 2 bên do .container lo */
+  --grid-gutter: 24px;
+
+  /* =====================================================================
+     MỞ RỘNG cho HR Persona Scanner (không có trong Figma TCP 2026)
+     ===================================================================== */
+
+  /* CTA thương hiệu: orange/500 theo feedback Design (16/10).
+     Lưu ý a11y: chữ trắng trên orange/500 chỉ đạt 2.8:1 (AA cần 4.5:1 với chữ thường). */
+  --brand-cta: var(--orange-500);
+  --brand-cta-hover: var(--orange-600);
+  --brand-cta-foreground: #FFFFFF;
+  --brand-highlight: var(--orange-500);    /* icon nhấn trên trang giới thiệu */
+  --brand-ink: var(--indigo-900);          /* chữ chàm đậm: tiêu đề, nhãn */
+  --page-bg: var(--slate-50);              /* nền trang Scanner */
+  --header-gradient: linear-gradient(100deg, var(--indigo-950) 0%, var(--indigo-800) 55%, var(--indigo-600) 100%);
+  --brand-gradient: linear-gradient(90deg, var(--indigo-600) 0%, var(--indigo-400) 100%);
+  --illustration-paper: #FBF5EE;           /* nền giấy của bộ minh họa (lấy mẫu từ hero.jpg) */
+
+  /* Display — bậc chữ lớn hơn H1 cho tiêu đề hero. Tuân quy tắc tracking: chữ càng lớn càng khít. */
+  --display-size: 64px; --display-lh: 68px; --display-ls: -2.5px;
+
+  /* 6 màu chân dung (đặc tả nghiệp vụ mục 7.3) */
+  --persona-kt: #2E5E8C;
+  --persona-dh: #2F8577;
+  --persona-tp: #C98A12;
+  --persona-gn: #5B4A9E;
+  --persona-gm: #1F7A4D;
+  --persona-tl: #C23B3B;
+
+  /* Màu nền banner / khối "Mảnh ghép chiến lược" / ô ảnh đồng đội — dùng ĐÚNG màu chân dung của đặc tả (mục 7.3),
+     không lấy mẫu từ ảnh. Giữ tên --banner-* để code không phải đổi. */
+  --banner-kt: var(--persona-kt);
+  --banner-dh: var(--persona-dh);
+  --banner-tp: var(--persona-tp);
+  --banner-gn: var(--persona-gn);
+  --banner-gm: var(--persona-gm);
+  --banner-tl: var(--persona-tl);
+}
