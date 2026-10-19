@@ -34,22 +34,22 @@ window.PERSONAS = {
 /* Bộ câu hỏi — thứ tự lưu trữ (đặc tả 5.1). Thứ tự hiển thị đáp án được xáo mỗi lượt.
    img: minh họa theo nhân vật đã chọn ở bước "Chọn nhân vật" (Figma 265:3450 … 267:3424). */
 window.QUESTIONS = [
-  { q: 'Sáng thứ Hai, việc đầu tiên bạn làm?', img: { female: 'assets/q1-f.jpg', male: 'assets/q1-m.jpg' }, a: {
+  { q: 'Sáng thứ Hai, việc đầu tiên bạn làm?', img: { female: 'assets/q1-f.webp', male: 'assets/q1-m.webp' }, a: {
     KT: 'Mở lại kế hoạch dài hạn, xem đang ở đâu', DH: 'Đi một vòng hỏi thăm cả team', TP: 'Thử ngay cái tool mới cuối tuần thấy',
     GN: 'Rà checklist, xem có gì sót', GM: 'Mở dashboard, soi số tuần qua', TL: 'Khuấy động, kéo tinh thần cả phòng lên' } },
-  { q: 'Đồng nghiệp tìm đến bạn nhiều nhất để…', img: { female: 'assets/q2-f.jpg', male: 'assets/q2-m.jpg' }, a: {
+  { q: 'Đồng nghiệp tìm đến bạn nhiều nhất để…', img: { female: 'assets/q2-f.webp', male: 'assets/q2-m.webp' }, a: {
     KT: 'Nhờ nhìn bức tranh tổng thể', DH: 'Tâm sự, cần người lắng nghe', TP: 'Hỏi có cách nào mới hơn không',
     GN: 'Chắc chắn làm vậy có đúng luật không', GM: 'Xin số liệu, bằng chứng', TL: 'Rủ làm cho có khí thế' } },
-  { q: 'Trong cuộc họp căng, bạn là người…', img: { female: 'assets/q3-f.jpg', male: 'assets/q3-m.jpg' }, a: {
+  { q: 'Trong cuộc họp căng, bạn là người…', img: { female: 'assets/q3-f.webp', male: 'assets/q3-m.webp' }, a: {
     KT: 'Kéo mọi người về mục tiêu lớn', DH: 'Để ý ai đang căng, ai im lặng', TP: 'Ném ra một hướng đi lạ',
     GN: 'Giữ cho đúng nguyên tắc, công bằng', GM: 'Hỏi "căn cứ vào đâu?"', TL: 'Pha trò, kéo năng lượng cả phòng lên' } },
-  { q: 'Điều khiến bạn khó chịu nhất ở chỗ làm?', img: { female: 'assets/q4-f.jpg', male: 'assets/q4-m.jpg' }, a: {
+  { q: 'Điều khiến bạn khó chịu nhất ở chỗ làm?', img: { female: 'assets/q4-f.webp', male: 'assets/q4-m.webp' }, a: {
     KT: 'Mọi thứ chắp vá, không hệ thống', DH: 'Người giỏi bị phớt lờ', TP: 'Câu "xưa giờ vẫn vậy mà"',
     GN: 'Làm ẩu, phá luật', GM: 'Quyết định cảm tính, không số liệu', TL: 'Không khí nguội lạnh, ai làm việc nấy' } },
-  { q: 'Một lời khen bạn thầm mong nghe nhất?', img: { female: 'assets/q5-f.jpg', male: 'assets/q5-m.jpg' }, a: {
+  { q: 'Một lời khen bạn thầm mong nghe nhất?', img: { female: 'assets/q5-f.webp', male: 'assets/q5-m.webp' }, a: {
     KT: '"Nhờ bạn mà cả tổ chức biết mình đang đi về đâu"', DH: '"Nhờ bạn tôi tin vào mình hơn"', TP: '"Bạn luôn đi trước một bước"',
     GN: '"Có bạn là yên tâm, chẳng lo sai"', GM: '"Số liệu bạn đưa cứu cả quyết định"', TL: '"Đội này đầy lửa là nhờ bạn"' } },
-  { q: 'Điều bạn âm thầm tự hào nhất?', img: { female: 'assets/q6-f.jpg', male: 'assets/q6-m.jpg' }, a: {
+  { q: 'Điều bạn âm thầm tự hào nhất?', img: { female: 'assets/q6-f.webp', male: 'assets/q6-m.webp' }, a: {
     KT: 'Xây được thứ chạy bền khi mình đi', DH: 'Là chỗ dựa cho nhiều người', TP: 'Luôn mang về cái mới',
     GN: 'Giữ mọi thứ an toàn, chuẩn mực', GM: 'Đọc được câu chuyện sau con số', TL: 'Thắp được lửa cho cả tập thể' } },
 ];
@@ -88,8 +88,8 @@ window.TEXT = {
     title: 'Chọn nhân vật của bạn',            // Figma 3:5048
     lead: 'Để chân dung hợp với bạn hơn nhé.',
     options: [
-      { id: 'female', label: 'Nữ',  img: 'assets/gender-female.png', alt: 'Minh họa nhân vật nữ' },
-      { id: 'male',   label: 'Nam', img: 'assets/gender-male.png',   alt: 'Minh họa nhân vật nam' },
+      { id: 'female', label: 'Nữ',  img: 'assets/gender-female.webp', alt: 'Minh họa nhân vật nữ' },
+      { id: 'male',   label: 'Nam', img: 'assets/gender-male.webp',   alt: 'Minh họa nhân vật nam' },
     ],
     next: 'Tiếp tục',
     back: 'Quay lại',
@@ -146,7 +146,7 @@ window.TEXT = {
     mentorTitle: 'Tìm mentor thế nào',
     stepTitle: 'Một bước nên đi tới',
     questionTitle: 'Câu hỏi mang về',
-    questionArt: { DH: 'assets/question-DH.png?v=5', KT: 'assets/question-KT.png?v=5', TP: 'assets/question-TP.png?v=4', GN: 'assets/question-GN.png?v=4', GM: 'assets/question-GM.png?v=4', TL: 'assets/question-TL.png?v=4' },   // minh họa cho khối "Câu hỏi mang về" (Figma 281:3439 … 281:3453)
+    questionArt: { DH: 'assets/question-DH.webp?v=6', KT: 'assets/question-KT.webp?v=6', TP: 'assets/question-TP.webp?v=6', GN: 'assets/question-GN.webp?v=6', GM: 'assets/question-GM.webp?v=6', TL: 'assets/question-TL.webp?v=6' },   // minh họa cho khối "Câu hỏi mang về" (Figma 281:3439 … 281:3453)
     teammateTitle: 'Đồng đội ăn ý',
     tcp: { eyebrow: 'Mảnh ghép chiến lược', title: 'Dành riêng cho bạn', cta: 'Tìm hiểu chương trình', url: 'https://talentconnectplus.edu.vn/' },
     brandCard: {

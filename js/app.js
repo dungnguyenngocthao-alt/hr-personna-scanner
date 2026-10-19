@@ -76,7 +76,7 @@
   function renderHome() {
     const H = TEXT.home;
     const cards = ORDER.map(c => `<figure class="cards__item" style="--persona:${color(c)}">
-        <img src="assets/card-${c}.png?v=3" alt="Minh họa ${esc(P[c].name)}" width="720" height="975" loading="lazy">
+        <img src="assets/card-${c}.webp?v=4" alt="Minh họa ${esc(P[c].name)}" width="720" height="975" loading="lazy">
         <figcaption><b>${esc(P[c].name)}</b><span>${esc(P[c].en)}</span></figcaption>
       </figure>`).join('');
     app.innerHTML = `
@@ -356,12 +356,12 @@
   /* ---------- Thẻ Nhân Vật (Figma 5:3192 … 67:3143) — bố cục bento + banner ---------- */
   const D = window.PERSONA_DETAIL, ESS = window.ESSENCE, FR = window.FRAMES;
   const md = s => esc(s).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>');   // `**…**` trong đặc tả = chữ đậm
-  const cut = c => `assets/card-${c}.png?v=3`;   // thẻ chân dung Figma 265:3428 … 265:3433 (xuất 3x, lưu 720px)
+  const cut = c => `assets/card-${c}.webp?v=4`;   // thẻ chân dung Figma 265:3428 … 265:3433 (xuất 3x, lưu 720px)
   /* Nền khối "Mảnh ghép chiến lược": assets/tcp-{mã}.jpg là vùng chỉ có đồ vật (không có người), cắt sẵn từ PNG gốc
      của banner rồi phóng lên 1600px cho màn retina → không còn vỡ hạt. Điểm neo dọc giữ đúng phần tranh đẹp nhất.
      URL để inline (không qua biến CSS). */
   const TCP_POS = { KT: '0% 100%', DH: '0% 100%', TP: '100% 60%', GN: '0% 55%', GM: '100% 15%', TL: '50% 40%' };   // TP: cụm núi bên phải ảnh; TL: đám đông (đã bỏ nhân vật chính); GM: chỉ cụm biểu đồ (cắt từ banner-GM, bỏ người)
-  const tcpBg = c => `background-image:url('assets/tcp-${c}.jpg?v=4');background-size:cover;background-position:${TCP_POS[c]}`;
+  const tcpBg = c => `background-image:url('assets/tcp-${c}.webp?v=5');background-size:cover;background-position:${TCP_POS[c]}`;
 
   /* Phân loại 10 trường hợp Figma: single · double1 (A có chân dung phụ) · double2 (B) · multi3 (C) · multi6 (D) */
   function resultCase(r) {
@@ -440,7 +440,7 @@
             <p class="res-banner__en">${esc(p.en)} · ${esc(p.role)}</p>
             <blockquote class="res-banner__quote">${icon('quote')}<span>${esc(p.chatRieng)}</span></blockquote>
           </div>
-          <div class="res-banner__art"><img src="assets/banner-${pc}.jpg" alt="Minh họa ${esc(p.name)}" width="1672" height="940" fetchpriority="high"></div>
+          <div class="res-banner__art"><img src="assets/banner-${pc}.webp" alt="Minh họa ${esc(p.name)}" width="1672" height="940" fetchpriority="high"></div>
         </div>
 
         <div class="bento">
@@ -476,7 +476,7 @@
           ${qArt ? `<figure class="q-art" style="--span:5"><img src="${qArt}" alt="" loading="lazy"></figure>` : ''}
 
           <figure class="tile tile--mate-art" style="--span:5;--bn-mate:var(--banner-${tm.toLowerCase()});--mate:${color(tm)}">
-            <img src="assets/banner-${tm}.jpg" alt="Minh họa ${esc(P[tm].name)}" width="1672" height="940" loading="lazy">
+            <img src="assets/banner-${tm}.webp" alt="Minh họa ${esc(P[tm].name)}" width="1672" height="940" loading="lazy">
             <figcaption>${esc(P[tm].name)}</figcaption>
           </figure>
           <article class="tile tile--mate" style="--span:7;--mate:${color(tm)}">
