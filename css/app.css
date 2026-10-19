@@ -164,16 +164,16 @@ body { background: var(--page-bg); }
 /* Rich radio (DS radio.md) */
 .option {
   display: flex; align-items: flex-start; gap: var(--space-8); width: 100%; padding: var(--space-12);
-  background: var(--white); border: 0; border-radius: var(--radius-12);   /* flat: trắng mặc định, không viền/bóng */
+  background: var(--white); border: 1px solid transparent; border-radius: var(--radius-12);   /* viền trong suốt sẵn → hiện viền khi hover/chọn không làm xê dịch */
   text-align: left; cursor: pointer; color: var(--foreground-alt);
   font-size: var(--p-sm-size); line-height: var(--p-sm-lh); letter-spacing: var(--p-sm-ls);
-  transition: background-color .15s ease, color .15s ease;
+  transition: background-color .15s ease, color .15s ease, border-color .15s ease;
 }
-.option:hover { background: color-mix(in srgb, var(--indigo-50) 55%, var(--white)); }
+.option:hover { background: color-mix(in srgb, var(--indigo-50) 55%, var(--white)); border-color: var(--indigo-300); }
 .option:focus-visible { box-shadow: var(--focus-ring); border-radius: var(--radius-12); }
 .option__radio { flex: none; width: 16px; height: 16px; margin-top: 3px; border-radius: var(--radius-full); border: 1.5px solid var(--indigo-300); background: var(--white); display: grid; place-items: center; }
 .option__text { min-width: 0; }
-.option[aria-checked="true"] { background: var(--indigo-50); color: var(--brand-ink); }
+.option[aria-checked="true"] { background: var(--indigo-50); color: var(--brand-ink); border-color: var(--primary); }
 .option[aria-checked="true"] .option__radio { border-color: var(--primary); }
 .option[aria-checked="true"] .option__radio::after { content: ""; width: 8px; height: 8px; border-radius: var(--radius-full); background: var(--primary); }
 
