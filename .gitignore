@@ -2,3 +2,4 @@
 assets/_hires/
 assets/_old/
 .DS_Store
+.vercel
