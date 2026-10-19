@@ -381,10 +381,14 @@
       const hot = v === top;
       return `<text x="${x.toFixed(1)}" y="${(y + (i === 0 ? -6 : i === 3 ? 12 : 4)).toFixed(1)}" text-anchor="${anchor}" class="radar__label${hot ? ' is-top' : ''}" ${hot ? `style="fill:${color(c)}"` : ''}>${esc(P[c].name.replace(/^(Nhà|Người) /, ''))} <tspan class="radar__num">${v}</tspan></text>`;
     }).join('');
+    /* Vùng màu chỉ nối các chân dung có điểm (theo thứ tự trục), không kéo về tâm ở trục 0 điểm.
+       Chỉ 1–2 chân dung có điểm thì thêm tâm để vẫn thành một vùng. */
+    const hit = r.scoreVector.map((v, i) => v ? pt(i, v) : null).filter(Boolean);
+    const shape = (hit.length >= 3 ? hit : [[cx, cy], ...hit]).map(p => p.map(n => n.toFixed(1)).join(',')).join(' ');
     const dots = r.scoreVector.map((v, i) => { const [x, y] = pt(i, v); return v ? `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="3.5" class="radar__dot"/>` : ''; }).join('');
     const aria = ORDER.map((c, i) => `${P[c].name} ${r.scoreVector[i]}`).join(', ');
     return `<svg class="radar" viewBox="0 0 ${W} ${H}" role="img" aria-label="Phổ điểm: ${esc(aria)} (trên 6)">
-      ${rings}${axes}<polygon class="radar__shape" points="${poly(r.scoreVector)}"/>${dots}${labels}</svg>`;
+      ${rings}${axes}<polygon class="radar__shape" points="${shape}"/>${dots}${labels}</svg>`;
   }
 
   function renderResult() {
