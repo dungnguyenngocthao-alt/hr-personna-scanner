@@ -102,17 +102,17 @@ body { background: var(--page-bg); }
 .gender__options { display: grid; grid-template-columns: repeat(2, 262px); justify-content: center; gap: var(--space-24); width: 100%; }
 .gender__card {
   position: relative; display: grid; justify-items: center; align-content: center; gap: var(--space-24); min-height: 350px; padding: var(--space-24);
-  background: var(--white); border: 0; border-radius: var(--radius-12); cursor: pointer; overflow: hidden;   /* flat */
+  background: var(--white); border: 1px solid transparent; border-radius: var(--radius-12); cursor: pointer; overflow: hidden;   /* viền trong suốt sẵn, hiện khi hover/chọn (như đáp án câu hỏi) */
   transition: transform .25s cubic-bezier(.2,.8,.2,1), box-shadow .25s ease, border-color .2s ease, background-color .2s ease;
 }
 .gender__art { position: relative; display: block; width: 100%; max-width: 212px; }
 .gender__art::before { content: ""; position: absolute; left: 8%; right: 8%; top: 14%; aspect-ratio: 1; border-radius: var(--radius-full); background: var(--indigo-100); transition: background-color .2s ease, transform .3s ease; }
 .gender__art img { position: relative; display: block; width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: contain; transition: transform .3s cubic-bezier(.2,.8,.2,1); }
 .gender__label { display: block; text-align: center; color: var(--secondary-foreground); font-size: var(--h4-size); line-height: var(--h4-lh); font-weight: 400; transition: color .2s ease; }
-.gender__card:hover { transform: translateY(-4px); }
+.gender__card:hover { transform: translateY(-4px); border-color: var(--indigo-300); }
 .gender__card:hover .gender__art img { transform: scale(1.04); }
 .gender__card:focus-visible { box-shadow: var(--focus-ring); }
-.gender__card[aria-checked="true"] { background: var(--indigo-50); }
+.gender__card[aria-checked="true"] { background: var(--indigo-50); border-color: var(--primary); }
 .gender__card[aria-checked="true"] .gender__art::before { background: var(--indigo-200); }
 .gender__card[aria-checked="true"] .gender__label { color: var(--primary); font-weight: 500; }
 .gender__options:has([aria-checked="true"]) .gender__card[aria-checked="false"] { opacity: .6; }
