@@ -220,6 +220,7 @@
 .picker__toggle:hover { background: var(--indigo-800); }
 .picker__toggle:focus-visible { outline: none; box-shadow: var(--focus-ring), var(--shadow-lg); }
 .picker__toggle svg.lucide { width: 16px; height: 16px; }
+.dev-note { opacity: .7; font-weight: 400; }   /* ghi chú "(chỉ dùng cho preview UI)" trên 2 nút công cụ */
 .picker__menu {
   order: 1; width: 260px; max-height: min(70dvh, 520px); overflow: auto; padding: var(--space-8);
   background: var(--white); border: 0; border-radius: var(--radius-12); box-shadow: var(--shadow-xl);

@@ -6,15 +6,7 @@
   const { CONFIG, ORDER, PERSONAS: P, QUESTIONS, TEXT, Scoring } = window;
   const app = document.getElementById('app');
 
-  /* Chế độ nội bộ: localhost hoặc ?dev=1 (lưu trong sessionStorage của tab); ?dev=0 để tắt */
-  const devMode = (() => {
-    try {
-      const q = new URLSearchParams(location.search).get('dev');
-      if (q === '1') sessionStorage.setItem('hrps-dev', '1');
-      if (q === '0') sessionStorage.removeItem('hrps-dev');
-      return CONFIG.DEV_TOOLS && (/^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname) || sessionStorage.getItem('hrps-dev') === '1');
-    } catch (e) { return false; }
-  })();
+  const devTools = !!CONFIG.DEV_TOOLS;   // công cụ preview UI (hiện ở mọi môi trường, có ghi chú "chỉ dùng cho preview UI")
   const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   const fill = (s, vars) => s.replace(/\{(\w+)\}/g, (_, k) => { if (!(k in vars)) throw new Error('Thiếu biến ' + k); return vars[k]; });
   const color = code => `var(--persona-${code.toLowerCase()})`;
@@ -317,11 +309,11 @@
         <label class="choice lead__consent"><input type="checkbox" class="checkbox" id="consent" ${c.marketingConsent ? 'checked' : ''}><span>${esc(CONFIG.MARKETING_CONSENT_TEXT)}</span></label>
         <button type="submit" class="btn btn--cta btn--lg btn--round lead__submit">${esc(F.submit)}</button>
         <p class="p-mini text-muted lead__foot">${esc(F.footnote)}</p>
-        ${devMode ? `<button type="button" class="link-btn link-btn--sm lead__demo" id="demo">${esc(F.demo)}</button>` : ''}
+        ${devTools ? `<button type="button" class="link-btn link-btn--sm lead__demo" id="demo">${esc(F.demo)} <span class="dev-note">${esc(TEXT.devNote)}</span></button>` : ''}
       </form>
     </div></section>`;
     document.getElementById('back').onclick = () => { S.screen = 'quiz'; S.q = 5; save(); go(); };
-    if (devMode) document.getElementById('demo').onclick = () => {
+    if (devTools) document.getElementById('demo').onclick = () => {
       const d = { fullName: 'Nguyễn Thị Lan', email: 'lan.nguyen@congty-mau.vn', company: 'Công ty Mẫu', companySize: '200-1000', phone: '0912 345 678', jobTitle: 'HR Business Partner' };
       Object.entries(d).forEach(([k, v]) => { const el = document.getElementById(k); if (el) { el.value = v; el.dispatchEvent(new Event('change')); } });
     };
@@ -556,12 +548,12 @@
     { group: 'multi6', answers: ['KT', 'DH', 'GN', 'GM', 'TL', 'TP'] },    // Figma 67:3143: chính = Tiên Phong
   ];
   function picker() {
-    if (!devMode || document.getElementById('picker')) return;
+    if (!devTools || document.getElementById('picker')) return;
     const T = TEXT.result.picker;
     const label = c => c.group === 'single' ? `${P[c.code].name}` : T[c.group];
     const el = document.createElement('div');
     el.id = 'picker'; el.className = 'picker';
-    el.innerHTML = `<button class="picker__toggle" aria-expanded="false" aria-controls="picker-menu">${icon('layout-grid')} ${esc(T.button)}</button>
+    el.innerHTML = `<button class="picker__toggle" aria-expanded="false" aria-controls="picker-menu">${icon('layout-grid')} <span>${esc(T.button)} <span class="dev-note">${esc(TEXT.devNote)}</span></span></button>
       <div class="picker__menu" id="picker-menu" role="menu" hidden>
         <p class="picker__title">${esc(T.title)}</p>
         <p class="picker__group">${esc(T.single)}</p>

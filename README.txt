@@ -17,7 +17,7 @@ Cấu trúc
 
 Ghi chú
 - Font Inter tải từ Google Fonts; khi offline trang tự dùng font dự phòng của máy.
-- Công cụ nội bộ "Preview UI kết quả" (góc phải dưới, duyệt 10 trường hợp kết quả) và
-  "Điền dữ liệu mẫu" (form) KHÔNG hiện cho người dùng. Chỉ hiện khi chạy ở localhost
-  hoặc mở link có ?dev=1 (nhớ trong tab đó; ?dev=0 để tắt). Tắt hẳn: CONFIG.DEV_TOOLS = false.
+- Hai nút công cụ "Preview UI kết quả" (góc phải dưới, duyệt 10 trường hợp kết quả) và
+  "Điền dữ liệu mẫu" (form) kèm ghi chú "(chỉ dùng cho preview UI)".
+  Tắt hẳn khi chạy thật: trong js/content.js đặt CONFIG.DEV_TOOLS = false.
 - Form chưa nối backend: dữ liệu chỉ nằm trong sessionStorage của trình duyệt.

@@ -10,8 +10,8 @@ window.CONFIG = {
   MARKETING_CONSENT_TEXT: 'Tôi đồng ý nhận thông tin về các chương trình của Talent Connect Plus qua email.',
   BOOTH_IDLE_RESET_SECONDS: 90,
   TIME_PROMISE_SECONDS: 60,
-  /* Công cụ nội bộ (nút "Preview UI kết quả", "Điền dữ liệu mẫu"): KHÔNG hiện cho người dùng.
-     Chỉ hiện ở localhost hoặc khi mở link có ?dev=1 (nhớ trong tab; ?dev=0 để tắt). */
+  /* Công cụ preview UI (nút "Preview UI kết quả", "Điền dữ liệu mẫu"): hiện ở mọi môi trường kèm ghi chú TEXT.devNote.
+     Tắt hẳn khi chạy thật với người dùng: DEV_TOOLS = false. */
   DEV_TOOLS: true,
 };
 
@@ -185,4 +185,5 @@ window.TEXT = {
   footer: '© 2026 Talent Connect Plus · {event}',
   ethics: 'Công cụ này là một bản phản chiếu phong cách làm nghề, không phải bài đánh giá tuyển dụng hay tâm lý lâm sàng.',
   styleguide: 'Styleguide',
+  devNote: '(chỉ dùng cho preview UI)',   // ghi chú cạnh 2 nút công cụ preview
 };
