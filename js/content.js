@@ -10,7 +10,9 @@ window.CONFIG = {
   MARKETING_CONSENT_TEXT: 'Tôi đồng ý nhận thông tin về các chương trình của Talent Connect Plus qua email.',
   BOOTH_IDLE_RESET_SECONDS: 90,
   TIME_PROMISE_SECONDS: 60,
-  RESULT_PICKER: true,               // hiện nút "Xem nhanh kết quả" để duyệt 10 trường hợp
+  /* Công cụ nội bộ (nút "Preview UI kết quả", "Điền dữ liệu mẫu"): KHÔNG hiện cho người dùng.
+     Chỉ hiện ở localhost hoặc khi mở link có ?dev=1 (nhớ trong tab; ?dev=0 để tắt). */
+  DEV_TOOLS: true,
 };
 
 window.ORDER = ['KT', 'DH', 'TP', 'GN', 'GM', 'TL'];
@@ -170,8 +172,8 @@ window.TEXT = {
       'Ulrich, D. et al. (2017). Victory Through Organization (HR Competency Study, Round 7). RBL Group & University of Michigan.',
       'Costa, P. T., & McCrae, R. R. (1992). Revised NEO Personality Inventory (Five-Factor Model).',
     ],
-    /* Bộ chọn nhanh để duyệt 10 trường hợp kết quả (bản demo/artifact). Tắt bằng CONFIG.RESULT_PICKER = false. */
-    picker: { button: 'Xem nhanh kết quả', title: 'Chọn trường hợp kết quả', single: 'Chân dung rõ nét', double1: 'Kép · 1 chính 1 phụ', double2: 'Kép · 2 bằng điểm', multi3: 'Đa diện · 3 bằng điểm', multi6: 'Đa diện · 6 bằng điểm' },
+    /* Bộ chọn nhanh để duyệt 10 trường hợp kết quả — công cụ nội bộ (xem CONFIG.DEV_TOOLS). */
+    picker: { button: 'Preview UI kết quả', title: 'Chọn trường hợp kết quả', single: 'Chân dung rõ nét', double1: 'Kép · 1 chính 1 phụ', double2: 'Kép · 2 bằng điểm', multi3: 'Đa diện · 3 bằng điểm', multi6: 'Đa diện · 6 bằng điểm' },
   },
   reset: {
     button: 'Lượt mới',
