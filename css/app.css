@@ -183,7 +183,7 @@ body { background: var(--page-bg); }
 .lead__eyebrow { font-size: var(--p-mini-size); line-height: var(--p-mini-lh); letter-spacing: var(--p-mini-ls); text-transform: uppercase; color: var(--indigo-800); }
 .lead__title { color: var(--indigo-800); }
 .lead__lead { margin-top: var(--space-12); color: var(--foreground); }
-.lead__form { display: flex; flex-direction: column; align-items: center; gap: var(--space-16); width: 100%; }
+.lead__form { display: flex; flex-direction: column; align-items: center; gap: var(--space-16); width: 100%; padding: var(--space-32); background: var(--white); border-radius: var(--radius-lg); }   /* form trong khối trắng, đồng bộ với các khối khác */
 .uline { display: grid; gap: var(--space-4); width: 100%; }
 .uline__label { display: flex; gap: var(--space-4); font-size: var(--p-mini-size); line-height: var(--p-mini-lh); letter-spacing: var(--p-mini-ls); color: var(--indigo-500); }
 .uline__input {
@@ -288,6 +288,7 @@ body { background: var(--page-bg); }
   .option__radio { width: 20px; height: 20px; margin-top: 0; border-color: var(--gray-300); }
   .option[aria-checked="true"] .option__radio::after { width: 10px; height: 10px; }
   .lead { padding-block: var(--space-16) var(--space-32); }
+  .lead__form { padding: var(--space-24) var(--space-20); border-radius: var(--radius-md); }
 }
 
 /* =========================================================================
